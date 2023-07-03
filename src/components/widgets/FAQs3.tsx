@@ -7,7 +7,7 @@ import CTA from '../common/CTA';
 const FAQs3 = ({ header, items, callToAction }: FAQsProps) => (
   <section className="bg-primary-50 dark:bg-slate-800" id="faqsThree">
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-      <div className="flex items-stretch justify-center">
+      <div className="flex items-stretch justify-center text-justify">
         <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
           <div className="block h-full sm:flex sm:items-center sm:justify-between md:mt-10 md:block">
             {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-4xl" />}

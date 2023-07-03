@@ -28,7 +28,7 @@ const Contact = () => {
                       ) : (
                         description &&
                         description.map((desc, index) => (
-                          <p key={`text-description-${index}`} className="text-gray-600 dark:text-slate-400">
+                          <p key={`text-description-${index}`} className="text-gray-600 dark:text-slate-400 text-justify">
                             {desc}
                           </p>
                         ))

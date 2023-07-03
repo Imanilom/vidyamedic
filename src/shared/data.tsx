@@ -1,6 +1,5 @@
 import {
   IconAnalyze,
-  IconArrowDown,
   IconArrowsRightLeft,
   IconBrandFacebook,
   IconBrandGithub,
@@ -10,7 +9,6 @@ import {
   IconBrandTwitter,
   IconBuildingHospital,
   IconBulb,
-  IconCheck,
   IconChevronDown,
   IconClock,
   IconComponents,
@@ -33,7 +31,6 @@ import {
   IconShare,
 } from '@tabler/icons-react';
 import {
-  AnnouncementProps,
   CallToActionProps,
   ComparisonProps,
   ContactProps,
@@ -57,45 +54,32 @@ import heroImg from '~/assets/images/hero.jpg';
 import hero2Img from '~/assets/images/hero2.jpg';
 import hero3Img from '~/assets/images/hero3.jpg';
 import hero4Img from '~/assets/images/hero4.jpg';
-import gasImg from '~/assets/images/gas.jpg';
 import nextJsLogo from '~/assets/images/nextjs-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
 import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
 import typescriptLogo from '~/assets/images/typescript-logo.png';
 import { IconPackage } from '@tabler/icons-react';
 
-// Announcement data
-export const announcementData: AnnouncementProps = {
-  title: 'NEW',
-  callToAction: {
-    text: 'This template is made with Next.js 13 using the new App Router »',
-    href: 'https://nextjs.org/docs/app',
-  },
-  callToAction2: {
-    text: 'Follow @onWidget on Twitter',
-    href: 'https://twitter.com/intent/user?screen_name=onwidget',
-  },
-};
-
 // Header data
 export const headerData: HeaderProps = {
+  
   links: [
+    {
+      label: 'Home',
+      href: '/',
+    },
+    {
+      label: 'Project',
+      href: '/project',
+    },
+    {
+      label: 'About',
+      href: '/about',
+    },
     {
       label: 'Pages',
       icon: IconChevronDown,
       links: [
-        {
-          label: 'Home',
-          href: '/',
-        },
-        {
-          label: 'Project',
-          href: '/project',
-        },
-        {
-          label: 'About',
-          href: '/about',
-        },
         {
           label: 'Contact us',
           href: '/contact',
@@ -110,20 +94,12 @@ export const headerData: HeaderProps = {
         },
       ],
     },
-    // {
-    //   label: 'Blog',
-    //   href: '/blog',
-    // },
-    // {
-    //   label: 'Contact',
-    //   href: '/contact',
-    // },
+   
   ],
   actions: [
     {
       text: 'Login',
-      href: '/',
-      targetBlank: true,
+      href: '/login',
       btnType: 'primary',
     },
   ],
@@ -137,7 +113,7 @@ export const headerData: HeaderProps = {
 export const heroData: HeroProps = {
   title: (
     <>
-      Smart Future eHealth <span className="hidden md:inline">for who?</span>
+      Smart Future e-Health, <span className="hidden md:inline">for who?</span>
     </>
   ),
   // subtitle: (
@@ -329,14 +305,12 @@ export const faqs3Data: FAQsProps = {
 export const faqs4Data: FAQsProps = {
   header: {
     title: 'How we do your data?',
-    highlight:
-      'Personal Health Data->Personal Health Information->History Health Knowledge->Realtime Health Intelligence',
     position: 'center',
   },
   tabs: [
     {
       link: {
-        label: 'Data, information, knowledge, and intelligence are related concepts that describe different levels of understanding and processing of raw facts. Some definitions of these concepts are:',
+        label: 'How we do your data?',
         href: '/tab1',
       },
       items: [
@@ -432,30 +406,19 @@ export const featuresData: FeaturesProps = {
       description:
         'The sensors collect patients clinical data and the state of their surroundings.',
       icon: IconHeartPlus,
-      link: {
-        label: 'Discover now',
-        href: '/',
-      },
     },
     {
       title: 'Sharing',
       description:
         'Transmitted to teh appropriate health care centre and providers.',
       icon: IconShare,
-      link: {
-        label: 'Discover now',
-        href: '/',
-      },
+
     },
     {
       title: 'Analysing Patient Information',
       description:
         'Real-time analysis automated decision support, prognosis action.',
       icon: IconAnalyze,
-      link: {
-        label: 'Discover now',
-        href: '/',
-      },
     }
   ],
 };
@@ -534,6 +497,7 @@ export const featuresData3: FeaturesProps = {
   ],
 };
 
+
 // Content data
 export const contentData: ContentProps = {
   header: {
@@ -541,39 +505,47 @@ export const contentData: ContentProps = {
     subtitle: 'See the difference of two term for increasing the effectiveness and efficient the individual health.',
     highlight: 'Differences',
   },
+};
+
+
+// Content data
+export const content1Data: ContentProps = {
+  header: {
+    title: 'Traditional HealthCare Model',
+  },
   content:
-    'Traditional health model is a term that refers to the conventional way of providing health care services based on the biomedical paradigm. It is characterized by the following features:',
-  items: [
-    {
-      title: 'Focus',
-      description:
-        'The focus is on curing diseases rather than promoting health and preventing illness.',
-    },
-    {
-      title: 'Health Care',
-      description:
-        'The health care providers are mainly physicians and nurses who work in hospitals or clinics.',
-    },
-    {
-      title: 'Patients',
-      description:
-        'The patients are passive recipients of care who follow the prescriptions and instructions of the providers.',
-    },
-    {
-      title: 'System',
-      description:
-        'The health care system is fragmented and hierarchical, with little coordination and collaboration among different disciplines and sectors.',
-    },
-    {
-      title: 'Delivery',
-      description:
-        'The health care delivery is based on standardized protocols and guidelines, with little attention to the individual needs and preferences of the patients.',
-    },
-    {
-      title: 'Financing',
-      description:
-        'The health care financing is mainly based on fee-for-service or insurance schemes, with little incentive for quality improvement and cost containment.',
-    },
+        'Traditional health model is a term that refers to the conventional way of providing health care services based on the biomedical paradigm. It is characterized by the following features:',
+    items: [
+      {
+        title: 'Focus',
+        description:
+          'The focus is on curing diseases rather than promoting health and preventing illness.',
+      },
+      {
+        title: 'Health Care',
+        description:
+          'The health care providers are mainly physicians and nurses who work in hospitals or clinics.',
+      },
+      {
+        title: 'Patients',
+        description:
+          'The patients are passive recipients of care who follow the prescriptions and instructions of the providers.',
+      },
+      {
+        title: 'System',
+        description:
+          'The health care system is fragmented and hierarchical, with little coordination and collaboration among different disciplines and sectors.',
+      },
+      {
+        title: 'Delivery',
+        description:
+          'The health care delivery is based on standardized protocols and guidelines, with little attention to the individual needs and preferences of the patients.',
+      },
+      {
+        title: 'Financing',
+        description:
+          'The health care financing is mainly based on fee-for-service or insurance schemes, with little incentive for quality improvement and cost containment.',
+      },
   ],
   image: {
     src: traditional,
@@ -585,6 +557,9 @@ export const contentData: ContentProps = {
 
 // Content2 data
 export const content2Data: ContentProps = {
+  header: {
+    title: 'Modern HealthCare Model',
+  },
   content:
     'Smart health model is a term that refers to the innovative way of providing health care services based on the integration of information and communication technologies (ICT) and medical devices. It is characterized by the following features:',
     items: [
@@ -632,7 +607,9 @@ export const stepsData: StepsProps = {
   title: 'What VidyaMedic do?',
   items: [
     {
-      title: 'Vidyamedic is a term that refers to the use smart health of information and communication technologies (ICT) to improve health and health-related fields. Smart eHealth tasks are the activities that can be performed by using Vidyamedic applications or devices. Some examples of smart eHealth tasks are:',
+      title: 'What is Vidyamedic',
+      description:
+      'Vidyamedic is a term that refers to the use smart health of information and communication technologies (ICT) to improve health and health-related fields. Smart e-Health tasks are the activities that can be performed by using Vidyamedic applications or devices. Some examples of smart e-Health tasks are:',
       icon: IconBulb,
     },
     {
@@ -1032,13 +1009,12 @@ export const statsData: StatsProps = {
 // Contact data
 export const contactData: ContactProps = {
   header: {
-    title: 'Benefit Join With Us!',
-    highlight: 'Join with Us',
+    title: 'What is The Benefit To Join With Us!',
   },
 
   items: [
     {
-      title: '',
+      title: 'Benefit Join with Us!',
       description: ['Define a clear purpose and scope for your data project. What are the questions you want to answer, the problems you want to solve, or the opportunities you want to explore with your data? What are the expected outcomes and benefits of your data project?'],
       icon: IconNumber1,
     },
@@ -1306,7 +1282,7 @@ export const footerData: FooterProps = {
       Made by{' '}
       <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
         {' '}
-        onWidget
+        VidyaMedic
       </a>{' '}
       · All rights reserved.
     </div>

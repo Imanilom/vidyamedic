@@ -20,7 +20,7 @@ const FAQs4 = ({ header, tabs }: FAQsProps) => {
     <section className="bg-primary-50 dark:bg-slate-800" id="faqsFour">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         {header && <HeaderWidget header={header} titleClassname="text-3xl sm:text-4xl" />}
-        <div className="flex items-stretch justify-center">
+        <div className="flex items-stretch justify-center text-justify">
           <div className="grid w-full md:grid-cols-3 md:items-center md:gap-4">
             {width > 767 ? (
               <div className="block h-full sm:flex sm:items-center sm:justify-between md:mx-4 md:mt-10 md:block md:px-4">
